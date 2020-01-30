@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_325709_terraform.tf_http</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>tf_http</name>
+        <script><![CDATA[/*global tf_config, tf_http*/
+
+// HTTP Wrapper for TerraForm
+var tf_http = Class.create();
+tf_http.prototype = {
+		/*
+    * @param {String} rest_message - SN REST Message
+    * @param {String} http_method  - SN REST Method
+    * @param {String} content      - SN REST Message
+    */
+    initialize: function(rest_message, http_method, content) {
+      var conf = new tf_config();
+
+      // ** Create REST Request **
+      // Might throw exception if message doesn't exist or not visible due to scope.
+      this.sm = new sn_ws.RESTMessageV2(rest_message, http_method);
+
+      // Set Request variables
+      this.sm.setHttpTimeout(10000); // Wait at most 10 seconds for response from http request.
+      this.sm.setStringParameter("hostname", conf.hostname);
+      this.sm.setStringParameter("org_name", conf.org_name);
+      this.sm.setStringParameter("api_team_token", conf.api_team_token);
+
+      // Only set request body if content provided
+      if (content !== null) {
+        this.sm.setRequestBody(content);
+      }
+    },
+
+    /*
+    * @param {String} key   - SN HTTP REST Parameter Key
+    * @param {String} value - SN HTTP REST Parameter Value
+    */
+    setParam: function(key, value) {
+      this.sm.setStringParameter(key, value);
+    },
+
+    /*
+    * @return {Object} obj - Object of parsed response
+    */
+    execute: function() {
+			var requestBody;
+			var requestStatus;
+			var responseBody;
+			var parsed = null;
+
+			try {
+				// Might throw exception if http connection timed out or auth error
+				var response = this.sm.execute();
+
+				responseBody = response.haveError() ? response.getErrorMessage() : response.getBody();
+				requestStatus    = response.getStatusCode();
+			} catch(ex) {
+				// On HTTP Request error
+				responseBody  = ex.getMessage();
+				requestBody   = this.sm ? this.sm.getRequestBody() : null;
+				requestStatus = response ? response.getStatusCode() : "500";
+
+				// Log to System Logs
+				gs.info("Error making HTTP Request");
+				gs.info("HTTP Status: "  + requestStatus);
+				gs.info("Request Body: " + requestBody);
+				gs.info("Response: "     + responseBody);
+			} finally {
+				if (requestStatus > 202) {
+					gs.info("HTTP Request Body: " + requestBody);
+					gs.info("HTTP Request Status: " + requestStatus);
+					gs.info("HTTP Request Error: "  + responseBody);
+				} else {
+					// parse JSON string returned from request into a JSON object
+					parsed = JSON.parse(responseBody);
+				}
+			}
+
+			return parsed;
+    },
+
+    type: 'tf_http'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 19:50:31</sys_created_on>
+        <sys_id>dd11af41dbce3300176661ca0b96191d</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>tf_http</sys_name>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>sys_script_include_dd11af41dbce3300176661ca0b96191d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-12 17:48:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

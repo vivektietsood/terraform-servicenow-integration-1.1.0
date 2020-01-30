@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_325709_terraform.tf_workspace</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>tf_workspace</name>
+        <script><![CDATA[ /*global tf_workspace, tf_http*/
+
+// Manage Terraform Workspaces
+var tf_workspace = Class.create();
+tf_workspace.prototype = {
+    initialize: function() {},
+
+	/*
+	* @param {Object} tf_config configuration object
+	* @return {String} Workspace URL
+	*/
+	createURL: function(conf, workspaceName) {
+		var formatedURL = conf.hostname + "/app/" + conf.org_name + "/workspaces/" + workspaceName;
+
+		return formatedURL;
+	},
+
+	/*
+	* @param {String} name
+	* @return {String} Formatted name for the created workspace
+	*/
+	createName: function(name) {
+		// Abstraction for a unique workspace name
+		return name;
+	},
+
+	/*
+	* TODO: This function could use some refactoring later...
+	* @param {Object} vcsObject       - VCS Glide Record
+	* @param {String} workspaceName   - Name of the workspace being created
+	* @param {String} requestID       - Catalog Request ID
+	* @param {String} recordURL       - URL of the Glide Record
+	* @param {Boolean} queue_all_runs - queue all runs on creation
+	* @param {Boolean} auto_apply     - runs auto apply on this workspace
+	* @return {Object} Data object for request content
+	*/
+	createRequestContent: function(vcsObject, workspaceName, requestID, recordURL, description, queue_all_runs, auto_apply) {
+		// Thanks ES5 for not supporting default param values...
+		queue_all_runs = typeof queue_all_runs !== 'undefined' ? queue_all_runs : false;
+		auto_apply     = typeof auto_apply !== 'undefined' ? auto_apply : false;
+
+		var data = {
+			"data": {
+				"attributes": {
+					"name": String(workspaceName),
+					"terraform_version": String(vcsObject.terraform_version),
+					"queue-all-runs": String(queue_all_runs),
+					"auto-apply": String(auto_apply),
+					"working-directory": String(vcsObject.working_directory),
+					"ingress-submodules": "false",
+					"vcs-repo": {
+						"identifier": String(vcsObject.identifier),
+						"oauth-token-id": String(vcsObject.oauth_token_id),
+						"branch": String(vcsObject.branch),
+						"default-branch": "true"
+					},
+					"source-name": "ServiceNow: " + String(requestID),
+					"source-url": String(recordURL),
+					"description": String(description)
+				},
+				"type": "workspaces"
+			}
+		};
+
+		return data;
+	},
+
+	/*
+	* @param {String} workspace_name - Name of the workspace to query TF API
+	* @return {Object|null} Parsed object from JSON data or null
+	*/
+	getWorkspaceCurrentRun: function(workspace_name) {
+		/* HTTP REST request to Terraform API */
+		var http = new tf_http("TF Workspaces", "Show Workspace", null);
+		http.setParam("workspace_name", workspace_name);
+
+		var parsedResponse = http.execute();
+    if (parsedResponse === null) {
+			return parsedResponse;
+		} else if (parsedResponse.hasOwnProperty("error") === true){
+			return parsedResponse;
+		} else {
+			return parsedResponse["data"]["relationships"]["current-run"]["data"];
+		}
+	},
+
+  /*
+   * Fetches workspace outputs and extracts the JSON:API attributes for
+   * outputs.
+   * @param {String} workspace_id - ID of the workspace to query TF API
+   * @return {Array} List of reformatted outputs from response object
+   */
+  getCurrentOutputs: function(workspace_id) {
+    /* HTTP REST request to Terraform API */
+    var http = new tf_http("TF Workspaces", "Get Current Outputs", null);
+    http.setParam("workspace_id", workspace_id);
+
+    var resp = http.execute();
+    var included = resp["included"];
+    if (included) {
+      var outputs = [];
+
+      included.forEach(function (resource) {
+        if (resource["type"] === "state-version-outputs") {
+          outputs.push(resource["attributes"]);
+        }
+      });
+
+      return outputs;
+    }
+  },
+
+  type: 'tf_workspace'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 19:49:05</sys_created_on>
+        <sys_id>57b02f41dbce3300176661ca0b9619d7</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>tf_workspace</sys_name>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>sys_script_include_57b02f41dbce3300176661ca0b9619d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-12 21:17:53</sys_updated_on>
+    </sys_script_include>
+</record_update>

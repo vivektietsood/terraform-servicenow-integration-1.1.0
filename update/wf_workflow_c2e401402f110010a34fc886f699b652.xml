@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"subflows":[],"ends":["ab205e942f510010a34fc886f699b6ab"],"activities":{},"stages":{}}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition/>
+        <condition_type/>
+        <description/>
+        <expected_sequences>ab205e942f510010a34fc886f699b6ac,2f205e942f510010a34fc886f699b6ad,ab205e942f510010a34fc886f699b6ab</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>ab205e942f510010a34fc886f699b6ac,2f205e942f510010a34fc886f699b6ad,ab205e942f510010a34fc886f699b6ab</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Example Pinned Variables</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field>stage</stage_field>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">ab205e942f510010a34fc886f699b6ac</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>af205e942f510010a34fc886f699b6a8</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:27:03</sys_updated_on>
+        <table>sc_req_item</table>
+        <timezone/>
+        <validated>false</validated>
+        <workflow display_value="Example Pinned Variables">c2e401402f110010a34fc886f699b652</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Example Pinned Variables</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-18 19:17:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c2e401402f110010a34fc886f699b652</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Example Pinned Variables</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>wf_workflow_c2e401402f110010a34fc886f699b652</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-18 19:17:59</sys_updated_on>
+        <table>sc_req_item</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Completed</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>2f205e942f510010a34fc886f699b6aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <value>complete</value>
+        <workflow_version display_value="Example Pinned Variables">af205e942f510010a34fc886f699b6a8</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Delivery</name>
+        <ola>1970-01-03 00:00:00</ola>
+        <order>140</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>27205e942f510010a34fc886f699b6ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <value>delivery</value>
+        <workflow_version display_value="Example Pinned Variables">af205e942f510010a34fc886f699b6a8</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Fulfillment</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>120</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>23205e942f510010a34fc886f699b6ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <value>fulfillment</value>
+        <workflow_version display_value="Example Pinned Variables">af205e942f510010a34fc886f699b6a8</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Cancelled</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1000</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>af205e942f510010a34fc886f699b6aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <value>Request Cancelled</value>
+        <workflow_version display_value="Example Pinned Variables">af205e942f510010a34fc886f699b6a8</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Approved</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>90</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>6b205e942f510010a34fc886f699b6aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <value>request_approved</value>
+        <workflow_version display_value="Example Pinned Variables">af205e942f510010a34fc886f699b6a8</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Waiting for Approval</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>a3205e942f510010a34fc886f699b6ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <value>waiting_for_approval</value>
+        <workflow_version display_value="Example Pinned Variables">af205e942f510010a34fc886f699b6a8</workflow_version>
+    </wf_stage>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>ab205e942f510010a34fc886f699b6ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Example Pinned Variables">af205e942f510010a34fc886f699b6a8</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=ab205e942f510010a34fc886f699b6ac"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">ab205e942f510010a34fc886f699b6ac</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>67205e942f510010a34fc886f699b6ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>ab205e942f510010a34fc886f699b6ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Example Pinned Variables">af205e942f510010a34fc886f699b6a8</workflow_version>
+        <x>662</x>
+        <y>266</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=ab205e942f510010a34fc886f699b6ab"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Example Workflow Pinned Variables</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>2f205e942f510010a34fc886f699b6ad</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:27:00</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Example Pinned Variables">af205e942f510010a34fc886f699b6a8</workflow_version>
+        <x>245</x>
+        <y>147</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=2f205e942f510010a34fc886f699b6ad"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2f205e942f510010a34fc886f699b6ad</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>27205e942f510010a34fc886f699b6ae</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:27:00</sys_updated_on>
+        <value>/*global tf_config, tf_workspace, tf_run, tf_terraform_record, tf_vcs_record, tf_http, tf_variable, tf_util*/&#13;
+&#13;
+gs.info("Workflow: Terraform example workflow pinned variables started...");&#13;
+&#13;
+// ** Custom Variables **&#13;
+var VAR_SET_NAME = "example_pinned_variables";&#13;
+var VCS_REPO     = "ORG_NAME/REPO_NAME";&#13;
+&#13;
+// ** Set to the Variable Set for this Catalog Item **&#13;
+// ** Any variables in the set must start with `tf_`&#13;
+var tf_variables = current.variables[VAR_SET_NAME];&#13;
+&#13;
+/* Instantiate Terraform Classes */&#13;
+var conf               = new tf_config();&#13;
+var util               = new tf_util();&#13;
+var workspace          = new tf_workspace();&#13;
+var terraform_record   = new tf_terraform_record();&#13;
+var vcs_record         = new tf_vcs_record();&#13;
+var terraform_variable = new tf_variable();&#13;
+&#13;
+/* Variables from the Request */&#13;
+var requestItemNumber = current.number;&#13;
+var requestID         = current.request.getDisplayValue(); // Catalog Request ID&#13;
+var workspaceVCS      = VCS_REPO;&#13;
+var description       = current.variables.description;&#13;
+&#13;
+/* Data for the request content */&#13;
+var workspaceName  = workspace.createName(requestItemNumber);&#13;
+var workspaceURL   = workspace.createURL(conf, workspaceName);&#13;
+var requestItemURL = terraform_record.createRecordURL(current.sys_id);&#13;
+var vcsRecord      = vcs_record.get(workspaceVCS);&#13;
+&#13;
+/* Create request content */&#13;
+var content        = workspace.createRequestContent(vcsRecord, workspaceName, requestItemNumber, requestItemURL, description, false, true);&#13;
+var requestContent = JSON.stringify(content);&#13;
+&#13;
+/* HTTP REST request to Terraform API */&#13;
+var http               = new tf_http("TF Workspaces", "Create Workspace", requestContent);&#13;
+var workspace_response = http.execute();&#13;
+var workspace_id       = workspace_response.data.id;&#13;
+&#13;
+/* Create SN Record from response */&#13;
+var gr = terraform_record.create(workspace_response, current.request.sys_id, current.sys_id, workspaceURL);&#13;
+&#13;
+var comment = util.formatCommentBlockQuote("Terraform: Workspace Created&lt;/br&gt;provisioning resources...");&#13;
+terraform_record.postRITMComment(gr.requested_item, comment);&#13;
+&#13;
+// Create any TF Variables/ENV Variables from the Variable Set.&#13;
+terraform_variable.createVariablesFromSet(tf_variables, workspace_id);&#13;
+&#13;
+// Create a run for workspace&#13;
+// Workspace was created with "auto-apply"&#13;
+util.sleep(5000);&#13;
+&#13;
+var run               = new tf_run();&#13;
+var runContent        = run.createRunRequestContent(workspace_id, requestID);&#13;
+var runRequestContent = JSON.stringify(runContent);&#13;
+&#13;
+/* HTTP REST request to Terraform API */&#13;
+var runHTTP  = new tf_http("TF Runs", "Create Run", runRequestContent);&#13;
+runHTTP.execute();&#13;
+&#13;
+gs.info("Workflow: Terraform example workflow pinned variables finished.");&#13;
+</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2f205e942f510010a34fc886f699b6ad</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>27205e942f510010a34fc886f699b6ae</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:27:00</sys_updated_on>
+        <value>/*global tf_config, tf_workspace, tf_run, tf_terraform_record, tf_vcs_record, tf_http, tf_variable, tf_util*/&#13;
+&#13;
+gs.info("Workflow: Terraform example workflow pinned variables started...");&#13;
+&#13;
+// ** Custom Variables **&#13;
+var VAR_SET_NAME = "example_pinned_variables";&#13;
+var VCS_REPO     = "ORG_NAME/REPO_NAME";&#13;
+&#13;
+// ** Set to the Variable Set for this Catalog Item **&#13;
+// ** Any variables in the set must start with `tf_`&#13;
+var tf_variables = current.variables[VAR_SET_NAME];&#13;
+&#13;
+/* Instantiate Terraform Classes */&#13;
+var conf               = new tf_config();&#13;
+var util               = new tf_util();&#13;
+var workspace          = new tf_workspace();&#13;
+var terraform_record   = new tf_terraform_record();&#13;
+var vcs_record         = new tf_vcs_record();&#13;
+var terraform_variable = new tf_variable();&#13;
+&#13;
+/* Variables from the Request */&#13;
+var requestItemNumber = current.number;&#13;
+var requestID         = current.request.getDisplayValue(); // Catalog Request ID&#13;
+var workspaceVCS      = VCS_REPO;&#13;
+var description       = current.variables.description;&#13;
+&#13;
+/* Data for the request content */&#13;
+var workspaceName  = workspace.createName(requestItemNumber);&#13;
+var workspaceURL   = workspace.createURL(conf, workspaceName);&#13;
+var requestItemURL = terraform_record.createRecordURL(current.sys_id);&#13;
+var vcsRecord      = vcs_record.get(workspaceVCS);&#13;
+&#13;
+/* Create request content */&#13;
+var content        = workspace.createRequestContent(vcsRecord, workspaceName, requestItemNumber, requestItemURL, description, false, true);&#13;
+var requestContent = JSON.stringify(content);&#13;
+&#13;
+/* HTTP REST request to Terraform API */&#13;
+var http               = new tf_http("TF Workspaces", "Create Workspace", requestContent);&#13;
+var workspace_response = http.execute();&#13;
+var workspace_id       = workspace_response.data.id;&#13;
+&#13;
+/* Create SN Record from response */&#13;
+var gr = terraform_record.create(workspace_response, current.request.sys_id, current.sys_id, workspaceURL);&#13;
+&#13;
+var comment = util.formatCommentBlockQuote("Terraform: Workspace Created&lt;/br&gt;provisioning resources...");&#13;
+terraform_record.postRITMComment(gr.requested_item, comment);&#13;
+&#13;
+// Create any TF Variables/ENV Variables from the Variable Set.&#13;
+terraform_variable.createVariablesFromSet(tf_variables, workspace_id);&#13;
+&#13;
+// Create a run for workspace&#13;
+// Workspace was created with "auto-apply"&#13;
+util.sleep(5000);&#13;
+&#13;
+var run               = new tf_run();&#13;
+var runContent        = run.createRunRequestContent(workspace_id, requestID);&#13;
+var runRequestContent = JSON.stringify(runContent);&#13;
+&#13;
+/* HTTP REST request to Terraform API */&#13;
+var runHTTP  = new tf_http("TF Runs", "Create Run", runRequestContent);&#13;
+runHTTP.execute();&#13;
+&#13;
+gs.info("Workflow: Terraform example workflow pinned variables finished.");&#13;
+</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Example Workflow Pinned Variables">2f205e942f510010a34fc886f699b6ad</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>63205e942f510010a34fc886f699b6af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">67205e942f510010a34fc886f699b6ad</condition>
+        <from display_value="Begin">ab205e942f510010a34fc886f699b6ac</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>e3205e942f510010a34fc886f699b6b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <to display_value="Example Workflow Pinned Variables">2f205e942f510010a34fc886f699b6ad</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">63205e942f510010a34fc886f699b6af</condition>
+        <from display_value="Example Workflow Pinned Variables">2f205e942f510010a34fc886f699b6ad</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>e7205e942f510010a34fc886f699b6b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <to display_value="End">ab205e942f510010a34fc886f699b6ab</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-19 19:25:21</sys_created_on>
+        <sys_id>63205e942f510010a34fc886f699b6a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-19 19:25:21</sys_updated_on>
+        <workflow_version display_value="Example Pinned Variables">af205e942f510010a34fc886f699b6a8</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=c2e401402f110010a34fc886f699b652^sys_id!=af205e942f510010a34fc886f699b6a8">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

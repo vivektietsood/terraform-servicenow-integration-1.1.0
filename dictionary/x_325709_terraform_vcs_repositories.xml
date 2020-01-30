@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="VCS Repositories" max_length="40" name="x_325709_terraform_vcs_repositories" type="collection">
+        <element choice="2" label="Branch" max_length="255" name="branch" type="string_full_utf8">
+            <choice/>
+        </element>
+        <element default="true" label="Default Branch" max_length="40" name="default_branch" type="boolean"/>
+        <element label="Identifier" mandatory="true" max_length="255" name="identifier" type="string_full_utf8"/>
+        <element label="Name" mandatory="true" max_length="255" name="name" type="string_full_utf8"/>
+        <element label="OAuth Token ID" mandatory="true" max_length="255" name="oauth_token_id" type="string_full_utf8"/>
+        <element display="true" hint="The version of Terraform to use for this workspace. Upon creating a workspace, the latest version is selected unless otherwise specified (e.g. &quot;0.11.14&quot;)." label="Terraform Version" max_length="255" name="terraform_version" type="string_full_utf8"/>
+        <element label="Working Directory" max_length="255" name="working_directory" type="string_full_utf8"/>
+    </element>
+</database>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"stages":{},"activities":{},"ends":["3f00cd2ddb610010ec759235ca961923"],"subflows":[]}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition/>
+        <condition_type/>
+        <description/>
+        <expected_sequences>f300cd2ddb610010ec759235ca961922,bf00cd2ddb610010ec759235ca961922,3f00cd2ddb610010ec759235ca961923</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>f300cd2ddb610010ec759235ca961922,bf00cd2ddb610010ec759235ca961922,3f00cd2ddb610010ec759235ca961923</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Poll Run State</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration display_value="2 business days by 4pm">3bf802c20a0a0b52008e2859cd8abcf2</relative_duration>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field/>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">f300cd2ddb610010ec759235ca961922</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>bf00cd2ddb610010ec759235ca961920</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:09:46</sys_updated_on>
+        <table>x_325709_terraform_terraform</table>
+        <timezone/>
+        <validated>true</validated>
+        <workflow display_value="Poll Run State">059048d5dbb03300e16e58b3ca96199b</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Poll Run State</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-12 18:49:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>059048d5dbb03300e16e58b3ca96199b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Poll Run State</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>wf_workflow_059048d5dbb03300e16e58b3ca96199b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-15 16:36:36</sys_updated_on>
+        <table>x_325709_terraform_terraform</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>f300cd2ddb610010ec759235ca961922</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:03:24</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Poll Run State">bf00cd2ddb610010ec759235ca961920</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=f300cd2ddb610010ec759235ca961922"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">f300cd2ddb610010ec759235ca961922</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>3b00cd2ddb610010ec759235ca961922</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:03:24</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>3f00cd2ddb610010ec759235ca961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:03:24</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Poll Run State">bf00cd2ddb610010ec759235ca961920</workflow_version>
+        <x>454</x>
+        <y>162</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=3f00cd2ddb610010ec759235ca961923"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Poll Run State</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>bf00cd2ddb610010ec759235ca961922</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:03:43</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Poll Run State">bf00cd2ddb610010ec759235ca961920</workflow_version>
+        <x>165</x>
+        <y>124</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=bf00cd2ddb610010ec759235ca961922"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bf00cd2ddb610010ec759235ca961922</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>b300cd2ddb610010ec759235ca961923</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:03:43</sys_updated_on>
+        <value>/*global tf_workspace, tf_run, tf_terraform_record, tf_util*/&#13;
+/*&#13;
+  Workspace Polling&#13;
+    Finds any records not in an applied state then&#13;
+    queries the Terraform Enterprise API for their status.&#13;
+*/&#13;
+&#13;
+// System Property variables for Terraform API&#13;
+var workspace       = new tf_workspace();&#13;
+var run             = new tf_run();&#13;
+var terraformRecord = new tf_terraform_record();&#13;
+var util            = new tf_util();&#13;
+&#13;
+// Search Terraform Table for any records not in "applied" state&#13;
+var gr = new GlideRecord("x_325709_terraform_terraform");&#13;
+gr.addQuery("last_known_state", "!=", "applied");&#13;
+gr.addQuery("is_destroyable", "=", false);&#13;
+gr.query();&#13;
+&#13;
+// Loop through all records&#13;
+while (gr.next()) {&#13;
+  var runID;&#13;
+&#13;
+  // Fetch Workspace Current Run Info&#13;
+  var currentRun = workspace.getWorkspaceCurrentRun(gr.workspace_name);&#13;
+  if (currentRun !== null) {&#13;
+    runID = currentRun.id;&#13;
+  } else {&#13;
+    gr.last_known_state = String(currentRun);&#13;
+    gr.update();&#13;
+    continue; // move on to next record&#13;
+  }&#13;
+&#13;
+  // Fetch Run State Info and update record&#13;
+  var runState = run.getRunState(runID).toLowerCase();&#13;
+  if (runState === gr.last_known_state) {&#13;
+    continue; // no-op&#13;
+  }&#13;
+&#13;
+  gr.last_known_state = runState;&#13;
+  gr.update();&#13;
+&#13;
+  // Post a comment with run state info to the request item&#13;
+  var comment;&#13;
+  switch (runState) {&#13;
+    case "planned", "planned_and_finished":&#13;
+      comment = util.formatCommentBlockQuote("Terraform: Plan Finished");&#13;
+      break;&#13;
+&#13;
+    case "applied":&#13;
+      // Fetch workspace outputs once the run has been applied and include in comment&#13;
+      comment = util.formatCommentBlockQuote("Terraform: Apply Finished");&#13;
+      var outputs = workspace.getCurrentOutputs(gr.workspace_id);&#13;
+      if (outputs) {&#13;
+        comment = comment + util.formatCommentOutputs(outputs);&#13;
+      }&#13;
+      break;&#13;
+&#13;
+    case "pending", "confirmed", "errored", "canceled", "discarded":&#13;
+      comment = util.formatCommentBlockQuote("Terraform: Run " + runState.capitalize());&#13;
+      break;&#13;
+&#13;
+    default:&#13;
+      comment = util.formatCommentBlockQuote("Terraform: " + runState);&#13;
+  }&#13;
+&#13;
+  terraformRecord.postRITMComment(gr.requested_item, comment);&#13;
+}&#13;
+</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>bf00cd2ddb610010ec759235ca961922</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>b300cd2ddb610010ec759235ca961923</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:03:43</sys_updated_on>
+        <value>/*global tf_workspace, tf_run, tf_terraform_record, tf_util*/&#13;
+/*&#13;
+  Workspace Polling&#13;
+    Finds any records not in an applied state then&#13;
+    queries the Terraform Enterprise API for their status.&#13;
+*/&#13;
+&#13;
+// System Property variables for Terraform API&#13;
+var workspace       = new tf_workspace();&#13;
+var run             = new tf_run();&#13;
+var terraformRecord = new tf_terraform_record();&#13;
+var util            = new tf_util();&#13;
+&#13;
+// Search Terraform Table for any records not in "applied" state&#13;
+var gr = new GlideRecord("x_325709_terraform_terraform");&#13;
+gr.addQuery("last_known_state", "!=", "applied");&#13;
+gr.addQuery("is_destroyable", "=", false);&#13;
+gr.query();&#13;
+&#13;
+// Loop through all records&#13;
+while (gr.next()) {&#13;
+  var runID;&#13;
+&#13;
+  // Fetch Workspace Current Run Info&#13;
+  var currentRun = workspace.getWorkspaceCurrentRun(gr.workspace_name);&#13;
+  if (currentRun !== null) {&#13;
+    runID = currentRun.id;&#13;
+  } else {&#13;
+    gr.last_known_state = String(currentRun);&#13;
+    gr.update();&#13;
+    continue; // move on to next record&#13;
+  }&#13;
+&#13;
+  // Fetch Run State Info and update record&#13;
+  var runState = run.getRunState(runID).toLowerCase();&#13;
+  if (runState === gr.last_known_state) {&#13;
+    continue; // no-op&#13;
+  }&#13;
+&#13;
+  gr.last_known_state = runState;&#13;
+  gr.update();&#13;
+&#13;
+  // Post a comment with run state info to the request item&#13;
+  var comment;&#13;
+  switch (runState) {&#13;
+    case "planned", "planned_and_finished":&#13;
+      comment = util.formatCommentBlockQuote("Terraform: Plan Finished");&#13;
+      break;&#13;
+&#13;
+    case "applied":&#13;
+      // Fetch workspace outputs once the run has been applied and include in comment&#13;
+      comment = util.formatCommentBlockQuote("Terraform: Apply Finished");&#13;
+      var outputs = workspace.getCurrentOutputs(gr.workspace_id);&#13;
+      if (outputs) {&#13;
+        comment = comment + util.formatCommentOutputs(outputs);&#13;
+      }&#13;
+      break;&#13;
+&#13;
+    case "pending", "confirmed", "errored", "canceled", "discarded":&#13;
+      comment = util.formatCommentBlockQuote("Terraform: Run " + runState.capitalize());&#13;
+      break;&#13;
+&#13;
+    default:&#13;
+      comment = util.formatCommentBlockQuote("Terraform: " + runState);&#13;
+  }&#13;
+&#13;
+  terraformRecord.postRITMComment(gr.requested_item, comment);&#13;
+}&#13;
+</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Poll Run State">bf00cd2ddb610010ec759235ca961922</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>b700cd2ddb610010ec759235ca961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:03:24</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">b700cd2ddb610010ec759235ca961923</condition>
+        <from display_value="Poll Run State">bf00cd2ddb610010ec759235ca961922</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>3700cd2ddb610010ec759235ca961925</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:03:24</sys_updated_on>
+        <to display_value="End">3f00cd2ddb610010ec759235ca961923</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">3b00cd2ddb610010ec759235ca961922</condition>
+        <from display_value="Begin">f300cd2ddb610010ec759235ca961922</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>7300cd2ddb610010ec759235ca961925</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:03:24</sys_updated_on>
+        <to display_value="Poll Run State">bf00cd2ddb610010ec759235ca961922</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:03:24</sys_created_on>
+        <sys_id>3300cd2ddb610010ec759235ca961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:03:24</sys_updated_on>
+        <workflow_version display_value="Poll Run State">bf00cd2ddb610010ec759235ca961920</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=059048d5dbb03300e16e58b3ca96199b^sys_id!=bf00cd2ddb610010ec759235ca961920">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Provision Resources with Variables">8058976adb213300e3d5d426ca961935</sc_cat_item>
+        <sc_category display_value="Terraform Resources">8872832edbe033009ba2f8fdbf961937</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-05-24 14:33:33</sys_created_on>
+        <sys_id>f3c81f6adb213300e3d5d426ca9619d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Terraform Resources.Provision Resources with Variables</sys_name>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>sc_cat_item_category_f3c81f6adb213300e3d5d426ca9619d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-05-24 14:33:33</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

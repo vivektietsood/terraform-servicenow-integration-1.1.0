@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Terraform" max_length="40" name="x_325709_terraform_terraform" type="collection">
+        <element label="Is Destroyable" max_length="40" name="is_destroyable" read_only="true" type="boolean"/>
+        <element label="Last Known State" max_length="255" name="last_known_state" read_only="true" type="string_full_utf8"/>
+        <element label="Request" max_length="32" name="request" read_only="true" reference="sc_request" type="reference"/>
+        <element label="Requested Item" max_length="32" name="requested_item" read_only="true" reference="sc_req_item" type="reference"/>
+        <element label="TF Action Type" max_length="255" name="tf_action_type" read_only="true" type="string_full_utf8"/>
+        <element label="TF Workspace URL" max_length="1024" name="tf_workspace_url" read_only="true" type="url"/>
+        <element label="Workspace ID" max_length="255" name="workspace_id" read_only="true" type="string_full_utf8"/>
+        <element label="Workspace Name" max_length="255" name="workspace_name" read_only="true" type="string"/>
+        <index name="index">
+            <element name="request"/>
+        </index>
+        <index name="index2">
+            <element name="requested_item"/>
+        </index>
+    </element>
+</database>

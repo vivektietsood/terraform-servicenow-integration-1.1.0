@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"stages":{},"activities":{},"ends":["6a42cdaddb610010ec759235ca96192f"],"subflows":[]}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition/>
+        <condition_type/>
+        <description/>
+        <expected_sequences>aa42cdaddb610010ec759235ca96192e,a642cdaddb610010ec759235ca961930,6a42cdaddb610010ec759235ca96192f</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>aa42cdaddb610010ec759235ca96192e,a642cdaddb610010ec759235ca961930,6a42cdaddb610010ec759235ca96192f</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Delete Workspace</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field>stage</stage_field>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">aa42cdaddb610010ec759235ca96192e</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>6242cdaddb610010ec759235ca96192c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:33</sys_updated_on>
+        <table>sc_req_item</table>
+        <timezone/>
+        <validated>true</validated>
+        <workflow display_value="Delete Workspace">de3c61fc2fc10010a34fc886f699b60d</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Delete Workspace</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-08 19:49:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de3c61fc2fc10010a34fc886f699b60d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Delete Workspace</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>wf_workflow_de3c61fc2fc10010a34fc886f699b60d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-08 19:49:31</sys_updated_on>
+        <table>sc_req_item</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Completed</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>2642cdaddb610010ec759235ca96192e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <value>complete</value>
+        <workflow_version display_value="Delete Workspace">6242cdaddb610010ec759235ca96192c</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Delivery</name>
+        <ola>1970-01-03 00:00:00</ola>
+        <order>140</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>2242cdaddb610010ec759235ca96192e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <value>delivery</value>
+        <workflow_version display_value="Delete Workspace">6242cdaddb610010ec759235ca96192c</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Fulfillment</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>120</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>ae42cdaddb610010ec759235ca96192d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <value>fulfillment</value>
+        <workflow_version display_value="Delete Workspace">6242cdaddb610010ec759235ca96192c</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Cancelled</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1000</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>a242cdaddb610010ec759235ca96192e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <value>Request Cancelled</value>
+        <workflow_version display_value="Delete Workspace">6242cdaddb610010ec759235ca96192c</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Approved</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>90</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>aa42cdaddb610010ec759235ca96192d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <value>request_approved</value>
+        <workflow_version display_value="Delete Workspace">6242cdaddb610010ec759235ca96192c</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Waiting for Approval</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>2e42cdaddb610010ec759235ca96192d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <value>waiting_for_approval</value>
+        <workflow_version display_value="Delete Workspace">6242cdaddb610010ec759235ca96192c</workflow_version>
+    </wf_stage>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>aa42cdaddb610010ec759235ca96192e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Delete Workspace">6242cdaddb610010ec759235ca96192c</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=aa42cdaddb610010ec759235ca96192e"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">aa42cdaddb610010ec759235ca96192e</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>e242cdaddb610010ec759235ca96192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Delete Workspace API</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>a642cdaddb610010ec759235ca961930</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:16</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Delete Workspace">6242cdaddb610010ec759235ca96192c</workflow_version>
+        <x>169</x>
+        <y>127</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=a642cdaddb610010ec759235ca961930"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a642cdaddb610010ec759235ca961930</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>2e42cdaddb610010ec759235ca961930</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:16</sys_updated_on>
+        <value>/*global tf_terraform_record, tf_util, tf_variable, tf_run, tf_http*/&#13;
+&#13;
+/*&#13;
+  This workflow looks for any ServiceNow Terraform records that have set&#13;
+  is_destroyable to true. This assumes that these Terraform Workspaces have&#13;
+  been marked for deletion.&#13;
+&#13;
+  This workflow:&#13;
+  - sets the is_destroyable value to true on the ServiceNow Terraform Table for the resource&#13;
+  - creates the CONFIRM_DESTROY=1 environment variable in terraform for the workspace&#13;
+  - creates a plan for a destroy run in terraform&#13;
+&#13;
+  The "Poll Destroy Workspace" finishes the process of cleaning up the workspace by applying&#13;
+  the destroy run, then deleting the workspace from Terraform.&#13;
+*/&#13;
+&#13;
+gs.info("Workflow: terraform delete workspace started...");&#13;
+&#13;
+var terraform_record = new tf_terraform_record();&#13;
+var util             = new tf_util();&#13;
+var tf_var           = new tf_variable();&#13;
+var run              = new tf_run();&#13;
+&#13;
+/* Data for the request content */&#13;
+var workspaceName = current.variables.workspace_name;  // Variable from Catalog Request&#13;
+var tfWorkspace   = terraform_record.get(workspaceName);&#13;
+&#13;
+// Search Terraform Table for the record&#13;
+var grTerraform = new GlideRecord("x_325709_terraform_terraform");&#13;
+grTerraform.addQuery("workspace_name", workspaceName);&#13;
+grTerraform.setLimit(1);&#13;
+grTerraform.query();&#13;
+while (grTerraform.next()) {&#13;
+  var workspaceID = grTerraform.workspace_id;&#13;
+&#13;
+  // Mark the ServiceNow Terraform Resource Record as destroyable&#13;
+  grTerraform.is_destroyable = true;&#13;
+  grTerraform.update();&#13;
+&#13;
+	/* Create environment variable CONFIRM_DESTROY=1 */&#13;
+  var var_content = tf_var.createVariableRequestContent(workspaceID, "CONFIRM_DESTROY", "1", "env", false);&#13;
+  tf_var.createVariable(JSON.stringify(var_content));&#13;
+&#13;
+  /* Plan a Destroy Run */&#13;
+  var destroyContent = run.createRunRequestContent(workspaceID, "Planning Destroy Run triggered by scheduler", true);&#13;
+  var destroyReqJSON = JSON.stringify(destroyContent);&#13;
+&#13;
+  // HTTP REST request to Terraform Run API to create a plan for the destroy run&#13;
+  var httpRun = new tf_http("TF Runs", "Create Run", destroyReqJSON);&#13;
+  httpRun.setParam("workspaceID", workspaceID);&#13;
+  httpRun.execute();&#13;
+}&#13;
+&#13;
+/* Add comment to original workspace request item */&#13;
+var url = "sc_req_item.do?sys_id=" + current.sys_id;&#13;
+var comment = util.formatCommentBlockQuote("Terraform: Marked Workspace for delete...") + "Triggered by " + util.formatCommentHyperlink(url, current.getDisplayValue());&#13;
+terraform_record.postRITMComment(tfWorkspace.requested_item, comment);&#13;
+&#13;
+/* Add comment to current request item */&#13;
+url = "sc_req_item.do?sys_id=" + tfWorkspace.requested_item;&#13;
+comment = "Marked Workspace for delete " + util.formatCommentHyperlink(url, workspaceName);&#13;
+terraform_record.postRITMComment(current.sys_id, comment);&#13;
+&#13;
+gs.info("Workflow: terraform delete workspace finished.");&#13;
+</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>a642cdaddb610010ec759235ca961930</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>2e42cdaddb610010ec759235ca961930</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:16</sys_updated_on>
+        <value>/*global tf_terraform_record, tf_util, tf_variable, tf_run, tf_http*/&#13;
+&#13;
+/*&#13;
+  This workflow looks for any ServiceNow Terraform records that have set&#13;
+  is_destroyable to true. This assumes that these Terraform Workspaces have&#13;
+  been marked for deletion.&#13;
+&#13;
+  This workflow:&#13;
+  - sets the is_destroyable value to true on the ServiceNow Terraform Table for the resource&#13;
+  - creates the CONFIRM_DESTROY=1 environment variable in terraform for the workspace&#13;
+  - creates a plan for a destroy run in terraform&#13;
+&#13;
+  The "Poll Destroy Workspace" finishes the process of cleaning up the workspace by applying&#13;
+  the destroy run, then deleting the workspace from Terraform.&#13;
+*/&#13;
+&#13;
+gs.info("Workflow: terraform delete workspace started...");&#13;
+&#13;
+var terraform_record = new tf_terraform_record();&#13;
+var util             = new tf_util();&#13;
+var tf_var           = new tf_variable();&#13;
+var run              = new tf_run();&#13;
+&#13;
+/* Data for the request content */&#13;
+var workspaceName = current.variables.workspace_name;  // Variable from Catalog Request&#13;
+var tfWorkspace   = terraform_record.get(workspaceName);&#13;
+&#13;
+// Search Terraform Table for the record&#13;
+var grTerraform = new GlideRecord("x_325709_terraform_terraform");&#13;
+grTerraform.addQuery("workspace_name", workspaceName);&#13;
+grTerraform.setLimit(1);&#13;
+grTerraform.query();&#13;
+while (grTerraform.next()) {&#13;
+  var workspaceID = grTerraform.workspace_id;&#13;
+&#13;
+  // Mark the ServiceNow Terraform Resource Record as destroyable&#13;
+  grTerraform.is_destroyable = true;&#13;
+  grTerraform.update();&#13;
+&#13;
+	/* Create environment variable CONFIRM_DESTROY=1 */&#13;
+  var var_content = tf_var.createVariableRequestContent(workspaceID, "CONFIRM_DESTROY", "1", "env", false);&#13;
+  tf_var.createVariable(JSON.stringify(var_content));&#13;
+&#13;
+  /* Plan a Destroy Run */&#13;
+  var destroyContent = run.createRunRequestContent(workspaceID, "Planning Destroy Run triggered by scheduler", true);&#13;
+  var destroyReqJSON = JSON.stringify(destroyContent);&#13;
+&#13;
+  // HTTP REST request to Terraform Run API to create a plan for the destroy run&#13;
+  var httpRun = new tf_http("TF Runs", "Create Run", destroyReqJSON);&#13;
+  httpRun.setParam("workspaceID", workspaceID);&#13;
+  httpRun.execute();&#13;
+}&#13;
+&#13;
+/* Add comment to original workspace request item */&#13;
+var url = "sc_req_item.do?sys_id=" + current.sys_id;&#13;
+var comment = util.formatCommentBlockQuote("Terraform: Marked Workspace for delete...") + "Triggered by " + util.formatCommentHyperlink(url, current.getDisplayValue());&#13;
+terraform_record.postRITMComment(tfWorkspace.requested_item, comment);&#13;
+&#13;
+/* Add comment to current request item */&#13;
+url = "sc_req_item.do?sys_id=" + tfWorkspace.requested_item;&#13;
+comment = "Marked Workspace for delete " + util.formatCommentHyperlink(url, workspaceName);&#13;
+terraform_record.postRITMComment(current.sys_id, comment);&#13;
+&#13;
+gs.info("Workflow: terraform delete workspace finished.");&#13;
+</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Delete Workspace API">a642cdaddb610010ec759235ca961930</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>a642cdaddb610010ec759235ca961931</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>6a42cdaddb610010ec759235ca96192f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Delete Workspace">6242cdaddb610010ec759235ca96192c</workflow_version>
+        <x>506</x>
+        <y>230</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=6a42cdaddb610010ec759235ca96192f"/>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">e242cdaddb610010ec759235ca96192f</condition>
+        <from display_value="Begin">aa42cdaddb610010ec759235ca96192e</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>2a42cdaddb610010ec759235ca961932</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <to display_value="Delete Workspace API">a642cdaddb610010ec759235ca961930</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">a642cdaddb610010ec759235ca961931</condition>
+        <from display_value="Delete Workspace API">a642cdaddb610010ec759235ca961930</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>2e42cdaddb610010ec759235ca961932</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <to display_value="End">6a42cdaddb610010ec759235ca96192f</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-05 21:13:09</sys_created_on>
+        <sys_id>2642cdaddb610010ec759235ca96192c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:13:09</sys_updated_on>
+        <workflow_version display_value="Delete Workspace">6242cdaddb610010ec759235ca96192c</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=de3c61fc2fc10010a34fc886f699b60d^sys_id!=6242cdaddb610010ec759235ca96192c">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

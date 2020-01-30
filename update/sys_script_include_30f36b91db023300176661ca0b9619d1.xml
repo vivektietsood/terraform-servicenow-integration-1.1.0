@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_325709_terraform.tf_variable</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>tf_variable</name>
+        <script><![CDATA[/*global tf_variable, tf_http*/
+
+// Terraform Variables
+var tf_variable = Class.create();
+tf_variable.prototype = {
+    initialize: function() {},
+
+    /*
+    * Create any TF Variables or TF ENV Variables from the SN Variable Set.
+    * Expected variable prefixes: tf_var_ or tf_env_
+    *
+    * @param {Object} var_set      - SN Variable Set Collection
+    * @param {String} workspace_id - Workspace ID
+    */
+    createVariablesFromSet: function(var_set, workspace_id){
+			// Creating a new instance of tf_variable inside function because 'this' won't work
+      var tfv = new tf_variable();
+
+			Object.keys(var_set).forEach(function(key) {
+				var _key = String(key);
+
+				if (_key.startsWith("tf_var_")) {
+                    var _tf_var     = _key.replace("tf_var_","");
+					var _varContent = tfv.createVariableRequestContent(workspace_id, _tf_var, String(var_set[key]), "terraform", false);
+					var _varRequest = JSON.stringify(_varContent);
+					tfv.createVariable(_varRequest);
+
+                } else if (_key.startsWith("sensitive_tf_var_")) {
+                    var _sensitive_tf_var     = _key.replace("sensitive_tf_var_","");
+					var _sensitiveVarContent = tfv.createVariableRequestContent(workspace_id, _sensitive_tf_var, String(var_set[key]), "terraform", true);
+					var _sensitiveVarRequest = JSON.stringify(_sensitiveVarContent);
+					tfv.createVariable(_sensitiveVarRequest);
+
+				} else if (_key.startsWith("tf_env_")) {
+					var _tf_env     = _key.replace("tf_env_","");
+					var _envContent = tfv.createVariableRequestContent(workspace_id, _tf_env, String(var_set[key]), "env", false);
+					var _envRequest = JSON.stringify(_envContent);
+					tfv.createVariable(_envRequest);
+
+				} else if (_key.startsWith("sensitive_tf_env_")) {
+					var _sensitive_tf_env     = _key.replace("sensitive_tf_env_","");
+					var _sensitiveEnvContent = tfv.createVariableRequestContent(workspace_id, _sensitive_tf_env, String(var_set[key]), "env", true);
+					var _sensitiveEnvRequest = JSON.stringify(_sensitiveEnvContent);
+					tfv.createVariable(_sensitiveEnvRequest);
+                }
+			});
+    },
+
+    /*
+		* @param {String} workspace_id - ID for the workspace to create variables on
+		* @param {Object} variable - Variable to create {"key": "someKey", "value": "someValue"}
+		*/
+		createVariable: function(requestContent) {
+			/* HTTP REST request to Terraform API */
+      var http = new tf_http("TF Variables", "Create Variable", requestContent);
+      http.execute();
+		},
+
+    /*
+		* @param {String} workspace_id - Workspace ID
+		* @param {String} key          - TF Var key/name
+		* @param {String} value        - TF VAR value
+		* @param {String} var_type     - The type of variable: terraform or env
+		* @param {Boolean} sensitive   - Sensitivity flag
+		* @return {Object} Data object for create variable request content
+		*/
+		createVariableRequestContent: function(workspace_id, key, value, var_type, sensitive) {
+			var_type  = typeof var_type  !== 'undefined' ? var_type : "terraform";
+			sensitive = typeof sensitive !== 'undefined' ? sensitive : false;
+
+			var data = {
+				"data": {
+					"type": "vars",
+					"attributes": {
+						"key": key,
+						"value": value,
+						"category": String(var_type),
+						"hcl": false,
+						"sensitive": sensitive
+					},
+					"relationships": {
+						"workspace": {
+							"data": {
+								"id": String(workspace_id),
+								"type": "workspaces"
+							}
+						}
+					}
+				}
+			};
+
+			return data;
+		},
+
+    type: 'tf_variable'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-14 14:41:27</sys_created_on>
+        <sys_id>30f36b91db023300176661ca0b9619d1</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>tf_variable</sys_name>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>sys_script_include_30f36b91db023300176661ca0b9619d1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-12 21:02:40</sys_updated_on>
+    </sys_script_include>
+</record_update>

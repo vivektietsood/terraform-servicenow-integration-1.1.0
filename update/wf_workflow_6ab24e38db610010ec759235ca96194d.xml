@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"activities":{},"stages":{},"subflows":[],"ends":["4d990586db520010e2e5f7af29961920"]}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition/>
+        <condition_type/>
+        <description/>
+        <expected_sequences>4d990586db520010e2e5f7af29961921,cd990586db520010e2e5f7af2996191e,4d990586db520010e2e5f7af29961920</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>4d990586db520010e2e5f7af29961921,cd990586db520010e2e5f7af2996191e,4d990586db520010e2e5f7af29961920</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Poll Destroy Workspace</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field>stage</stage_field>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">4d990586db520010e2e5f7af29961921</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>8199c9c2db520010e2e5f7af2996194c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:50:03</sys_updated_on>
+        <table>sc_req_item</table>
+        <timezone/>
+        <validated>false</validated>
+        <workflow display_value="Poll Destroy Workspace">6ab24e38db610010ec759235ca96194d</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Poll Destroy Workspace</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-03 17:59:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6ab24e38db610010ec759235ca96194d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Poll Destroy Workspace</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>wf_workflow_6ab24e38db610010ec759235ca96194d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-03 17:59:14</sys_updated_on>
+        <table>sc_req_item</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Completed</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>4d99c9c2db520010e2e5f7af2996194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <value>complete</value>
+        <workflow_version display_value="Poll Destroy Workspace">8199c9c2db520010e2e5f7af2996194c</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Delivery</name>
+        <ola>1970-01-03 00:00:00</ola>
+        <order>140</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>4999c9c2db520010e2e5f7af2996194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <value>delivery</value>
+        <workflow_version display_value="Poll Destroy Workspace">8199c9c2db520010e2e5f7af2996194c</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Fulfillment</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>120</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>c999c9c2db520010e2e5f7af2996194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <value>fulfillment</value>
+        <workflow_version display_value="Poll Destroy Workspace">8199c9c2db520010e2e5f7af2996194c</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Cancelled</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1000</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>c599c9c2db520010e2e5f7af2996194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <value>Request Cancelled</value>
+        <workflow_version display_value="Poll Destroy Workspace">8199c9c2db520010e2e5f7af2996194c</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Approved</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>90</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>0599c9c2db520010e2e5f7af2996194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <value>request_approved</value>
+        <workflow_version display_value="Poll Destroy Workspace">8199c9c2db520010e2e5f7af2996194c</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Waiting for Approval</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>cd99c9c2db520010e2e5f7af2996194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <value>waiting_for_approval</value>
+        <workflow_version display_value="Poll Destroy Workspace">8199c9c2db520010e2e5f7af2996194c</workflow_version>
+    </wf_stage>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>4d990586db520010e2e5f7af29961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Poll Destroy Workspace">8199c9c2db520010e2e5f7af2996194c</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=4d990586db520010e2e5f7af29961921"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">4d990586db520010e2e5f7af29961921</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>09990586db520010e2e5f7af29961922</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>4d990586db520010e2e5f7af29961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Poll Destroy Workspace">8199c9c2db520010e2e5f7af2996194c</workflow_version>
+        <x>551</x>
+        <y>193</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=4d990586db520010e2e5f7af29961920"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Poll Destroy Workspace</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>cd990586db520010e2e5f7af2996191e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:58</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Poll Destroy Workspace">8199c9c2db520010e2e5f7af2996194c</workflow_version>
+        <x>151</x>
+        <y>123</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=cd990586db520010e2e5f7af2996191e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cd990586db520010e2e5f7af2996191e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>09990586db520010e2e5f7af2996191f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:59</sys_updated_on>
+        <value>/*global tf_terraform_record, tf_run, tf_workspace, tf_util, tf_http*/&#13;
+/*&#13;
+  Poll Destroy Workspace&#13;
+    Finds any records marked where is-destroyable = true and&#13;
+    sends the destroy API requests to Terraform&#13;
+&#13;
+    The "Delete Workspace" example workflow catalog item will set the is_destroyable&#13;
+    value, then create a terraform destroy plan.&#13;
+    This workflow will then check the state of the planning workflow.&#13;
+    If it's done planning, it will apply the destroy run.&#13;
+    If it's done applying the destroy run, it will delete the workspace from Terraform.&#13;
+*/&#13;
+&#13;
+gs.info("Polling Workflow: terraform delete workspace started...");&#13;
+&#13;
+// System Property variables for Terraform API&#13;
+var terraform_record = new tf_terraform_record();&#13;
+var run              = new tf_run();&#13;
+var workspace        = new tf_workspace();&#13;
+var util             = new tf_util();&#13;
+&#13;
+// Search Terraform Table for any records with is_destroyable=true&#13;
+var gr = new GlideRecord("x_325709_terraform_terraform");&#13;
+gr.addQuery("is_destroyable", "=", true);&#13;
+gr.addQuery("last_known_state", "!=", "deleted");&#13;
+gr.query();&#13;
+&#13;
+// Loop through all records&#13;
+while (gr.next()) {&#13;
+  var comment      = "";&#13;
+  var tfWorkspace  = terraform_record.get(gr.workspace_name);&#13;
+  var workspaceID  = String(tfWorkspace.workspace_id);&#13;
+  var tfCurrentRun = workspace.getWorkspaceCurrentRun(gr.workspace_name);&#13;
+  var tfRunState   = run.getRunState(tfCurrentRun.id).toLowerCase();&#13;
+&#13;
+  // Move on to next record if the current run is not a destroy action&#13;
+  if (run.isDestroyRun(tfCurrentRun.id) === "false" ) {&#13;
+    continue; // move on to next record&#13;
+  }&#13;
+&#13;
+  switch (tfRunState) {&#13;
+    case "planning":&#13;
+      // no-op: move on until it's done&#13;
+      break;&#13;
+&#13;
+    case "planned":&#13;
+      /* Apply Run */&#13;
+      // If the destroy run is finished planning, we can confirm and apply the destroy run.&#13;
+      var applyContent = run.createRunRequestContent(workspaceID, "Destroy triggered by scheduler");&#13;
+      var requestJSON  = JSON.stringify(applyContent);&#13;
+&#13;
+      var http = new tf_http("TF Runs", "Apply Run", requestJSON);&#13;
+      http.setParam("run_id", String(tfCurrentRun.id));&#13;
+      http.execute();&#13;
+&#13;
+      gr.last_known_state = "destroy_applying";&#13;
+      gr.update();&#13;
+      comment = util.formatCommentBlockQuote("Terraform: destroy run applying");&#13;
+      break;&#13;
+&#13;
+    case "applied": case "planned_and_finished":&#13;
+      /* Delete Workspace */&#13;
+      // The destroy run removing all resources managed by terraform is complete so we can delete the workspace.&#13;
+      // HTTP REST request to Terraform Workspace API&#13;
+      var httpWorkspace = new tf_http("TF Workspaces", "Delete Workspace", null);&#13;
+      httpWorkspace.setParam("workspace_name", String(gr.workspace_name));&#13;
+      httpWorkspace.execute();&#13;
+&#13;
+      gr.last_known_state = "deleted";&#13;
+      gr.update();&#13;
+      comment = util.formatCommentBlockQuote("Terraform: Workspace Deleted");&#13;
+      break;&#13;
+&#13;
+    case "applying":&#13;
+      // no-op: move on until it's done&#13;
+      break;&#13;
+&#13;
+    case "discarded": case "errored": case "canceled":&#13;
+      gr.last_known_state = "errored";&#13;
+      gr.is_destroyable   = false;&#13;
+      gr.update();&#13;
+      comment = util.formatCommentBlockQuote("Terraform: destroy error, resetting to not destroyable");&#13;
+      break;&#13;
+  }&#13;
+&#13;
+  terraform_record.postRITMComment(gr.requested_item, comment);&#13;
+} // end while loop&#13;
+&#13;
+gs.info("Polling Workflow: terraform delete workspace finished.");</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cd990586db520010e2e5f7af2996191e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>09990586db520010e2e5f7af2996191f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:59</sys_updated_on>
+        <value>/*global tf_terraform_record, tf_run, tf_workspace, tf_util, tf_http*/&#13;
+/*&#13;
+  Poll Destroy Workspace&#13;
+    Finds any records marked where is-destroyable = true and&#13;
+    sends the destroy API requests to Terraform&#13;
+&#13;
+    The "Delete Workspace" example workflow catalog item will set the is_destroyable&#13;
+    value, then create a terraform destroy plan.&#13;
+    This workflow will then check the state of the planning workflow.&#13;
+    If it's done planning, it will apply the destroy run.&#13;
+    If it's done applying the destroy run, it will delete the workspace from Terraform.&#13;
+*/&#13;
+&#13;
+gs.info("Polling Workflow: terraform delete workspace started...");&#13;
+&#13;
+// System Property variables for Terraform API&#13;
+var terraform_record = new tf_terraform_record();&#13;
+var run              = new tf_run();&#13;
+var workspace        = new tf_workspace();&#13;
+var util             = new tf_util();&#13;
+&#13;
+// Search Terraform Table for any records with is_destroyable=true&#13;
+var gr = new GlideRecord("x_325709_terraform_terraform");&#13;
+gr.addQuery("is_destroyable", "=", true);&#13;
+gr.addQuery("last_known_state", "!=", "deleted");&#13;
+gr.query();&#13;
+&#13;
+// Loop through all records&#13;
+while (gr.next()) {&#13;
+  var comment      = "";&#13;
+  var tfWorkspace  = terraform_record.get(gr.workspace_name);&#13;
+  var workspaceID  = String(tfWorkspace.workspace_id);&#13;
+  var tfCurrentRun = workspace.getWorkspaceCurrentRun(gr.workspace_name);&#13;
+  var tfRunState   = run.getRunState(tfCurrentRun.id).toLowerCase();&#13;
+&#13;
+  // Move on to next record if the current run is not a destroy action&#13;
+  if (run.isDestroyRun(tfCurrentRun.id) === "false" ) {&#13;
+    continue; // move on to next record&#13;
+  }&#13;
+&#13;
+  switch (tfRunState) {&#13;
+    case "planning":&#13;
+      // no-op: move on until it's done&#13;
+      break;&#13;
+&#13;
+    case "planned":&#13;
+      /* Apply Run */&#13;
+      // If the destroy run is finished planning, we can confirm and apply the destroy run.&#13;
+      var applyContent = run.createRunRequestContent(workspaceID, "Destroy triggered by scheduler");&#13;
+      var requestJSON  = JSON.stringify(applyContent);&#13;
+&#13;
+      var http = new tf_http("TF Runs", "Apply Run", requestJSON);&#13;
+      http.setParam("run_id", String(tfCurrentRun.id));&#13;
+      http.execute();&#13;
+&#13;
+      gr.last_known_state = "destroy_applying";&#13;
+      gr.update();&#13;
+      comment = util.formatCommentBlockQuote("Terraform: destroy run applying");&#13;
+      break;&#13;
+&#13;
+    case "applied": case "planned_and_finished":&#13;
+      /* Delete Workspace */&#13;
+      // The destroy run removing all resources managed by terraform is complete so we can delete the workspace.&#13;
+      // HTTP REST request to Terraform Workspace API&#13;
+      var httpWorkspace = new tf_http("TF Workspaces", "Delete Workspace", null);&#13;
+      httpWorkspace.setParam("workspace_name", String(gr.workspace_name));&#13;
+      httpWorkspace.execute();&#13;
+&#13;
+      gr.last_known_state = "deleted";&#13;
+      gr.update();&#13;
+      comment = util.formatCommentBlockQuote("Terraform: Workspace Deleted");&#13;
+      break;&#13;
+&#13;
+    case "applying":&#13;
+      // no-op: move on until it's done&#13;
+      break;&#13;
+&#13;
+    case "discarded": case "errored": case "canceled":&#13;
+      gr.last_known_state = "errored";&#13;
+      gr.is_destroyable   = false;&#13;
+      gr.update();&#13;
+      comment = util.formatCommentBlockQuote("Terraform: destroy error, resetting to not destroyable");&#13;
+      break;&#13;
+  }&#13;
+&#13;
+  terraform_record.postRITMComment(gr.requested_item, comment);&#13;
+} // end while loop&#13;
+&#13;
+gs.info("Polling Workflow: terraform delete workspace finished.");</value>
+        <variable display_value="">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Poll Destroy Workspace">cd990586db520010e2e5f7af2996191e</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>45990586db520010e2e5f7af29961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">09990586db520010e2e5f7af29961922</condition>
+        <from display_value="Begin">4d990586db520010e2e5f7af29961921</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>01990586db520010e2e5f7af29961924</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <to display_value="Poll Destroy Workspace">cd990586db520010e2e5f7af2996191e</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">45990586db520010e2e5f7af29961920</condition>
+        <from display_value="Poll Destroy Workspace">cd990586db520010e2e5f7af2996191e</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>c9990586db520010e2e5f7af29961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <to display_value="End">4d990586db520010e2e5f7af29961920</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-13 17:49:03</sys_created_on>
+        <sys_id>8599c9c2db520010e2e5f7af2996194c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-13 17:49:03</sys_updated_on>
+        <workflow_version display_value="Poll Destroy Workspace">8199c9c2db520010e2e5f7af2996194c</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=6ab24e38db610010ec759235ca96194d^sys_id!=8199c9c2db520010e2e5f7af2996194c">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

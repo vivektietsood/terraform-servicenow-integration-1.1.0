@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sc_cat_item display_value="Provision Resources">75da5de5db513300e16e58b3ca9619e4</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-28 15:37:54</sys_created_on>
+        <sys_id>b727b739db92330019899b81ca961946</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Workspace Request Create.Provision Resources</sys_name>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>io_set_item_b727b739db92330019899b81ca961946</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-28 15:37:54</sys_updated_on>
+        <variable_set display_value="Workspace Request Create">c18f6bf1db92330019899b81ca9619f5</variable_set>
+    </io_set_item>
+</record_update>

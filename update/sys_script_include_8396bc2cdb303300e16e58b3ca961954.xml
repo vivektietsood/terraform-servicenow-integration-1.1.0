@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_325709_terraform.tf_util</api_name>
+        <client_callable>false</client_callable>
+        <description>Utility functions for TF Integration</description>
+        <name>tf_util</name>
+        <script><![CDATA[// Helper Functions
+var tf_util = Class.create();
+tf_util.prototype = {
+    initialize: function() {},
+
+    /*
+    Hack around SN blocking sleep
+    @param {Integer} ms - milliseconds to sleep.
+    */
+    sleep: function(ms) {
+      var unixtime_ms = new Date().getTime();
+      while(new Date().getTime() < unixtime_ms + ms) { /*null*/ }
+    },
+
+    /*
+    * @param {Array} outputs - Outputs to be formatted. They are expected to be an
+    * array of objects, with each object having a name and value field.
+    * @return {String} formatted object as an HTML code block to be used within Journal fields
+    */
+    formatCommentOutputs: function(outputs) {
+      outputs.sort(function(a, b) {
+        return a.name - b.name;
+      });
+
+      var buffer = '';
+      buffer = buffer + '[code]';
+
+      buffer = buffer +
+        '<style type="text/css">' +
+        '.tf-output-sensitive { filter: blur(4px); } ' +
+        '.tf-output-sensitive:hover { filter: none; } ' +
+        '</style>';
+
+      outputs.forEach(function(output) {
+        if (output.sensitive) {
+          buffer = buffer +
+            '<h4>' +
+            '<code>' + output.name + '</code>' +
+            '&nbsp;<small>sensitive</small>' +
+            '</h4>' +
+            '<div class="tf-output-sensitive">';
+        } else {
+          buffer = buffer +
+            '<h4><code>' + output.name + '</code></h4>' +
+            '<div>';
+        }
+
+        buffer = buffer +
+          '<pre><code>' +
+          JSON.stringify(output.value, null, 2).replace(/\n/g, '<br/>') +
+          '</code></pre>' +
+          '</div>';
+      });
+
+      buffer = buffer + '[/code]';
+
+      return buffer;
+    },
+
+    /*
+    https://community.servicenow.com/community?id=community_blog&sys_id=4d9ceae1dbd0dbc01dcaf3231f9619e1
+    * @param {Object} obj - Object to be formatted as a JSON code block
+    * @return {String} formatted object as an HTML code block to be used within Journal fields
+    */
+    formatCommentCodeBlock: function(obj) {
+      var jsonObj = JSON.stringify(obj, null, 2);
+      return "[code]<pre><code>" + jsonObj.replace(/\n/g, "<br/>") + "</code></pre>[/code]";
+    },
+
+    /*
+    * @param {String} quote - String to be in a quote block
+    * @return {String} formatted string as an HTML quote block to be used within Journal fields
+    */
+    formatCommentBlockQuote: function(quote) {
+      return "[code]<blockquote>" + quote + "</blockquote>[/code]";
+    },
+
+    /*
+    * @param {String} url  - URL for the hyperlink
+    * @param {String} text - Optional text to display the url within the hyperlink
+    * @return {String} formatted url as an HTML hyperlink to be used within Journal fields
+    */
+    formatCommentHyperlink: function(url, text) {
+      return "[code]<a href=\"" + url + "\">" + (text === null ? url : text) + "</a>[/code]";
+    },
+
+    type: 'tf_util'
+};
+
+/*
+* @return {String} string with the first letter capitalized
+*/
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-10 14:52:20</sys_created_on>
+        <sys_id>8396bc2cdb303300e16e58b3ca961954</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>tf_util</sys_name>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>sys_script_include_8396bc2cdb303300e16e58b3ca961954</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-28 20:30:32</sys_updated_on>
+    </sys_script_include>
+</record_update>

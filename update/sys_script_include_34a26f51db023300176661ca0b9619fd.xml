@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_325709_terraform.tf_run</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>tf_run</name>
+        <script><![CDATA[/*global tf_run, tf_http*/
+
+// Terraform Variables
+var tf_run = Class.create();
+tf_run.prototype = {
+    initialize: function() {},
+
+	/*
+	* @param {String} workspace_id - Workspace ID
+	* @param {String} msg_content  - Content for message on TF Run
+	* @param {Boolean} is_destroy  - If this run is a destroy run
+	* @return {Object} Data object for create run request content
+	*/
+	createRunRequestContent: function(workspace_id, msg_content, is_destroy) {
+    // ES5 does not support default param values...
+		is_destroy = typeof is_destroy !== 'undefined' ? is_destroy : false;
+
+		var data = {
+			"data": {
+				"type": "runs",
+				"attributes": {
+					"is-destroy": is_destroy,
+					"message": String(msg_content)
+				},
+				"relationships": {
+					"workspace": {
+						"data": {
+							"type": "workspaces",
+							"id": String(workspace_id)
+						}
+					}
+				}
+			}
+		};
+
+		return data;
+	},
+
+	/*
+	* @param {String} run_id - Run ID
+	* @return {Object} Current Run State JSON
+	*/
+	getRun: function(run_id) {
+		var http = new tf_http("TF Runs", "Get Run", null);
+		http.setParam("run_id", run_id);
+
+		var parsedResponse = http.execute();
+
+    return parsedResponse
+	},
+
+	/*
+	* @param {String} run_id - Run ID
+	* @return {String} Current Run State String
+	*/
+	getRunState: function(run_id) {
+		var http = new tf_http("TF Runs", "Get Run", null);
+		http.setParam("run_id", run_id);
+
+		var parsedResponse = http.execute();
+
+		if (parsedResponse.hasOwnProperty("error") === true){
+			return "unknown";
+		} else {
+			return String(parsedResponse["data"]["attributes"]["status"]);
+		}
+	},
+
+	/*
+	* @param {String} run_id - Run ID
+	* @return {Boolean}
+	*/
+	isDestroyRun: function(run_id) {
+		var run  = new tf_run();
+		var data = run.getRun(run_id);
+
+		if (data.hasOwnProperty("error") === true){
+			return null;
+		} else {
+			return String(data["data"]["attributes"]["is-destroy"]);
+		}
+	},
+
+	type: 'tf_run'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-14 14:35:38</sys_created_on>
+        <sys_id>34a26f51db023300176661ca0b9619fd</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>tf_run</sys_name>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>sys_script_include_34a26f51db023300176661ca0b9619fd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-05 20:58:56</sys_updated_on>
+    </sys_script_include>
+</record_update>

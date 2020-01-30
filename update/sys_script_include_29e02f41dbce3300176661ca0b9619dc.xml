@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_325709_terraform.tf_terraform_record</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>tf_terraform_record</name>
+        <script><![CDATA[/*global tf_terraform_record*/
+
+// Manage ServiceNow Terraform Records
+var tf_terraform_record = Class.create();
+tf_terraform_record.prototype = {
+    initialize: function() {},
+
+    /*
+    * @param {Object} obj                - Object of parsed response
+    * @param {String} request_sys_id     - sys_id of the Catalog Request
+    * @param {String} sc_req_item_sys_id - sys_id of the Requested Item
+    * @param {String} ritm_url           - ServiceNow URL of the requested item
+    * @param {String} workspace_url      - Terraform URL of the workspace
+    * @returns {Object} Terraform GlideRecord
+    */
+    create: function(obj, request_sys_id, sc_req_item_sys_id, workspace_url) {
+      var grTerraform = new GlideRecord("x_325709_terraform_terraform");
+			grTerraform.initialize();
+			grTerraform.request          = request_sys_id;
+			grTerraform.requested_item   = sc_req_item_sys_id;
+			grTerraform.tf_action_type   = "Create Workspace";
+			grTerraform.workspace_id     = obj.data.id;
+			grTerraform.tf_workspace_url = workspace_url;
+			grTerraform.workspace_name   = obj.data.attributes.name;
+			grTerraform.last_known_state = "not started"; // default until run status is updated
+			grTerraform.insert();
+		return grTerraform;
+    },
+
+  /*
+	* @param {String} workspace_name - Workspace Name
+	* @returns {Object} Terraform GlideRecord
+	*/
+	get: function(workspace_name) {
+		var record;
+		var grTerraform = new GlideRecord("x_325709_terraform_terraform");
+		grTerraform.addQuery("workspace_name", workspace_name);
+		grTerraform.setLimit(1);
+		grTerraform.query();
+		while (grTerraform.next()) {
+			record = grTerraform;
+		}
+		return record;
+	},
+
+	/*
+	* @param {String} sys_id of the request record
+	* @return {String} Generated URL of request record prior to creation
+	*/
+	createRecordURL: function(sys_id) {
+		return gs.getProperty('glide.servlet.uri') + "sc_req_item.do?sys_id=" + sys_id;
+	},
+
+	/*
+	Post a comment to a requested item from the Terraform Catalog based on the Requested Item
+	* @param {String} sys_id - sys_id of the Requested Item
+	* @param {String} content - Content to post as a comment on the request item
+	*/
+	postRITMComment: function(sys_id, content) {
+		// Query request items for the request
+		var reqItem = new GlideRecord("sc_req_item");
+		reqItem.addQuery("sys_id", sys_id);
+		reqItem.query();
+
+		while (reqItem.next()) {
+			reqItem.comments = content;
+			reqItem.update();
+		}
+	},
+
+    type: 'tf_terraform_record'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 19:49:40</sys_created_on>
+        <sys_id>29e02f41dbce3300176661ca0b9619dc</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>tf_terraform_record</sys_name>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>sys_script_include_29e02f41dbce3300176661ca0b9619dc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-12 21:48:26</sys_updated_on>
+    </sys_script_include>
+</record_update>

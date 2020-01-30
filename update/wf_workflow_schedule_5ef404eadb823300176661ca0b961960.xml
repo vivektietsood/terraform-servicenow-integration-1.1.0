@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_schedule">
+    <wf_workflow_schedule action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Worker Poll Apply Run</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2019-06-17 19:39:25</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[var ws = new global.WorkflowScheduler(); ws.run();]]></script>
+        <sys_class_name>wf_workflow_schedule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-17 19:46:23</sys_created_on>
+        <sys_id>5ef404eadb823300176661ca0b961960</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Worker Poll Apply Run</sys_name>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>wf_workflow_schedule_5ef404eadb823300176661ca0b961960</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-17 19:49:23</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+        <workflow display_value="Poll Apply Run">e92544eadb823300176661ca0b961912</workflow>
+    </wf_workflow_schedule>
+</record_update>

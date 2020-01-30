@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="tf_workspace_url" label="TF Workspace URL" language="en" table="x_325709_terraform_terraform">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>tf_workspace_url</element>
+            <help/>
+            <hint/>
+            <label>TF Workspace URL</label>
+            <language>en</language>
+            <name>x_325709_terraform_terraform</name>
+            <plural>TF Workspace URLs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-28 20:01:33</sys_created_on>
+            <sys_id>f6384906db520010e2e5f7af299619e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>TF Workspace URL</sys_name>
+            <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+            <sys_update_name>sys_documentation_x_325709_terraform_terraform_tf_workspace_url_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-28 20:01:33</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

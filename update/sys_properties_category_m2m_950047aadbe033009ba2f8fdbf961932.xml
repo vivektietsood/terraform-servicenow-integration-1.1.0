@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Terraform Configuration">f96af226dbe033009ba2f8fdbf9619ef</category>
+        <order>3</order>
+        <property display_value="x_325709_terraform.api_team_token" name="x_325709_terraform.api_team_token">40de7a2adbe033009ba2f8fdbf96195d</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-04 19:42:39</sys_created_on>
+        <sys_id>950047aadbe033009ba2f8fdbf961932</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_325709_terraform.api_team_token.Terraform Enterprise Configuration</sys_name>
+        <sys_package display_value="Terraform" source="x_325709_terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Terraform">a3f7fe62dbe033009ba2f8fdbf96192a</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_950047aadbe033009ba2f8fdbf961932</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-04 19:42:39</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>
